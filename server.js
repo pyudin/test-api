@@ -7,4 +7,6 @@ app.use(cors());
 app.use("/", express.static("public"));
 app.use("/users", users);
 
-app.listen(8090, () => console.log("App is running on port 8090"));
+app.listen(process.env.PORT || 8090, () =>
+  console.log("App is running on port 8090")
+);
